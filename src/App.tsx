@@ -13,22 +13,15 @@ export type Todo = {
   userId: number;
 };
 
-interface User {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-}
-
 // function getNewTodoId(todos: Todo[]) {
 //   const maxId = Math.max(...todos.map(todo => todo.id));
 
 //   return maxId + 1;
 // }
 
-function getUserById(userId: number): User | null {
-  return usersFromServer.find(user => user.id === userId) || null;
-}
+// function getUserById(userId: number): User | null {
+//   return usersFromServer.find(user => user.id === userId) || null;
+// }
 
 // export const initialTodos: Todo[] = todosFromServer.map(todo => ({
 //   ...todo,
@@ -80,7 +73,6 @@ export const App = () => {
         title: title.trim(),
         completed: false,
         userId: Number(userId),
-        user: getUserById(Number(userId)),
       },
     ]);
 
